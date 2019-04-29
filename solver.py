@@ -42,7 +42,19 @@ def solve(client):
         for i in range(0, len(num_bots)):
             if num_bots[i] > 0:
                 bots_position.append([i, num_bots[i]])
-        print(bots_position)
+        # print(bots_position)
+        return bots_position
+
+    def floyd():
+        distance = [[9999 for _ in range(client.v + 1)] for _ in range(client.v + 1)]
+        for i in range(1, client.v + 1):
+            for j in range(1, client.v + 1):
+                distance[i][j] = client.G[i][j]['weight']
+        for k in range(1, client.v + 1):
+            for i in range(1, client.v + 1):
+                for j in range(1, client.v + 1):
+                    distance[i][j] = min(distance[i][j], distance[i][k] + distance[k][j])
+        return distance
 
     def MST():
         mst_edges = [[0 for col in range(client.v + 1)] for row in range(client.v + 1)]
