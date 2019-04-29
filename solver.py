@@ -13,6 +13,7 @@ def solve(client):
         count = 0
         vote = [[0, i] for i in range(0, 101)]
         num_bots = [0 for _ in range(0, 101)]
+        remoted = [0 for _ in range(0, 101)]
         bots_position = []
         for v in non_home:
             scout_dict = client.scout(v, all_students)
@@ -32,12 +33,14 @@ def solve(client):
                     tempu, tempv = node[1], i
                     min_weight = client.G[node[1]][i]['weight']
             num_check = client.remote(tempu, tempv)
-            count += num_check - num_bots[tempu]
+            remoted[tempv] += num_check
+            count += num_check - remoted[tempu]
             num_bots[tempv] += num_check
-            num_bots[tempu] -= num_check
+            if remoted[tempu] > 0:
+                num_bots[tempu] -= num_check
             if count == client.bots:
                 break
-        for i in range(1, len(num_bots)):
+        for i in range(0, len(num_bots)):
             if num_bots[i] > 0:
                 bots_position.append([i, num_bots[i]])
         print(bots_position)
@@ -138,4 +141,5 @@ def solve(client):
 
     #MST()
     mst2()
+
     client.end()
