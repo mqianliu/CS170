@@ -11,6 +11,7 @@ def solve(client):
     client.scout(random.choice(non_home), all_students)
     for _ in range(100):
         u, v = random.choice(list(client.G.edges()))
-        #client.remote(u, v)
+        client.remote(u, v)
 
     client.end()
+
