@@ -6,8 +6,6 @@ import random
 def solve(client):
     client.end()
     client.start()
-    all_students = list(range(1, client.students + 1))
-    non_home = list(range(1, client.home)) + list(range(client.home + 1, client.v + 1))
 
     def find_position():
         all_students = list(range(1, client.students + 1))
@@ -26,7 +24,7 @@ def solve(client):
         # print(vote)
         # print(scout_dict)
         for node in vote:
-            min_weight = 999999
+            min_weight = float('inf')
             tempu = 0
             tempv = 0
             for i in range(1, client.v + 1):
@@ -34,27 +32,69 @@ def solve(client):
                     tempu, tempv = node[1], i
                     min_weight = client.G[node[1]][i]['weight']
             num_check = client.remote(tempu, tempv)
+            count += num_check - num_bots[tempu]
             num_bots[tempv] += num_check
             num_bots[tempu] -= num_check
-            count += num_check
             if count == client.bots:
                 break
-        for i in range(0, len(num_bots)):
+        for i in range(1, len(num_bots)):
             if num_bots[i] > 0:
                 bots_position.append([i, num_bots[i]])
-        # print(bots_position)
+        print(bots_position)
         return bots_position
 
     def floyd():
-        distance = [[9999 for _ in range(client.v + 1)] for _ in range(client.v + 1)]
+        distance = [[[float('inf'), -1] for _ in range(client.v + 1)] for _ in range(client.v + 1)]
         for i in range(1, client.v + 1):
             for j in range(1, client.v + 1):
-                distance[i][j] = client.G[i][j]['weight']
+                if i != j:
+                    distance[i][j][0] = client.G[i][j]['weight']
+                    distance[i][j][1] = [i, j]
         for k in range(1, client.v + 1):
             for i in range(1, client.v + 1):
                 for j in range(1, client.v + 1):
-                    distance[i][j] = min(distance[i][j], distance[i][k] + distance[k][j])
+                    if i != j and distance[i][j][0] > distance[i][k][0] + distance[k][j][0]:
+                        distance[i][j][0] = distance[i][k][0] + distance[k][j][0]
+                        distance[i][j][1] = distance[i][k][:] + distance[k][j][1:]
         return distance
+
+    def mst2():
+        bots = find_position()
+        nodes = [client.home]
+        edges = [[0 for col in range(client.v + 1)] for row in range(client.v + 1)]
+        while len(bots):
+            d = floyd()
+            min_path = float('inf')
+            start_node = -1
+            end_node = -1
+            for n in nodes:
+                for b in bots:
+                    if min_path > d[n][b[0]][0]:
+                        min_path = d[n][b[0]][0]
+                        start_node = n
+                        end_node = b
+            path = d[start_node][end_node[0]][1]
+            for i in range(len(path) - 1):
+                nodes.append(path[i+1])
+                edges[path[i]][path[i+1]] = 1
+                edges[path[i+1]][path[i]] = 1
+            bots.remove(end_node)
+
+        visited = [0 for _ in range(client.v + 1)]
+
+        def dfs(n):
+            nonlocal visited
+            if visited[n]:
+                return
+            visited[n] = 1
+            for i in nodes:
+                if not visited[i] and edges[n][i]:
+                    dfs(i)
+                    client.remote(i, n)
+
+        dfs(client.home)
+
+
 
     def MST():
         mst_edges = [[0 for col in range(client.v + 1)] for row in range(client.v + 1)]
@@ -96,5 +136,6 @@ def solve(client):
 
         dfs(client.home)
 
-    MST()
+    #MST()
+    mst2()
     client.end()
