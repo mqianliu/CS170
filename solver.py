@@ -47,18 +47,20 @@ def solve(client):
         return bots_position
 
     def floyd():
-        distance = [[[float('inf'), -1] for _ in range(client.v + 1)] for _ in range(client.v + 1)]
+        distance = [[[float('inf'), [-1]] for _ in range(client.v + 1)] for _ in range(client.v + 1)]
         for i in range(1, client.v + 1):
             for j in range(1, client.v + 1):
                 if i != j:
                     distance[i][j][0] = client.G[i][j]['weight']
                     distance[i][j][1] = [i, j]
+                else:
+                    distance[i][j][1] = [i]
         for k in range(1, client.v + 1):
             for i in range(1, client.v + 1):
                 for j in range(1, client.v + 1):
-                    if i != j and distance[i][j][0] > distance[i][k][0] + distance[k][j][0]:
+                    if i != j and i != k and j != k and distance[i][j][0] > distance[i][k][0] + distance[k][j][0]:
                         distance[i][j][0] = distance[i][k][0] + distance[k][j][0]
-                        distance[i][j][1] = distance[i][k][:] + distance[k][j][1:]
+                        distance[i][j][1] = distance[i][k][1][:] + distance[k][j][1][1:]
         return distance
 
     def mst2():
@@ -78,6 +80,8 @@ def solve(client):
                         end_node = b
             path = d[start_node][end_node[0]][1]
             for i in range(len(path) - 1):
+                if path[i+1] in bots:
+                    bots.remove(path[i+1])
                 nodes.append(path[i+1])
                 edges[path[i]][path[i+1]] = 1
                 edges[path[i+1]][path[i]] = 1
