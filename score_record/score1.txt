@@ -1,6 +1,3 @@
-[21:11:30] Client initialized! Using group token lu2UJJnxOf4Obb3KdF1RwbkXt77Eqdwm7GtE/MVwC0tnZU45RHR1Vw==.
-[21:11:30] Rescues Remaining: 0/600
-[21:11:30] Saved submit_token at submit_tokens/submit_token_190429_211130.txt. Submit this on Gradescope.
 [21:11:41] Rescues Remaining: 0/600
 [21:11:41] Starting submission 1.
 [21:11:41] /end API 403 Error: No active rescue. See https://guavabot.cs170.org/api/errors/#no-active-rescue for more details.
@@ -3223,3 +3220,6 @@
 [21:15:28] Finished submission 24.
 [21:15:28] Rescues Remaining: 24/600
 [21:15:28] Saved submit_token at submit_tokens/submit_token_190429_211528.txt. Submit this on Gradescope.
+
+yueyu@surface MINGW64 ~/OneDrive/courses/cs170 algorithms/project/CS170 (master)
+$
