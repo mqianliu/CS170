@@ -67,8 +67,8 @@ def solve(client):
         bots = find_position()
         nodes = [client.home]
         edges = [[0 for col in range(client.v + 1)] for row in range(client.v + 1)]
+        d = floyd()
         while len(bots):
-            d = floyd()
             min_path = float('inf')
             start_node = -1
             end_node = -1
