@@ -11,7 +11,8 @@ def solve(client):
         all_students = list(range(1, client.students + 1))
         non_home = list(range(1, client.home)) + list(range(client.home + 1, client.v + 1))
         count = 0
-        vote = [[0, i] for i in range(0, 101)]
+        # vote number, vertex index, remote index, min weight
+        vote = [[0, i, 0, float('inf')] for i in range(0, 101)]
         num_bots = [0 for _ in range(0, 101)]
         remoted = [0 for _ in range(0, 101)]
         bots_position = []
@@ -21,10 +22,25 @@ def solve(client):
                 if scout_dict[key] is True:
                     vote[v][0] += 1
 
-        vote.sort(key=lambda x: x[0], reverse=True)
-        # print(vote)
-        # print(scout_dict)
+        for i in range(1, 101):
+            node = vote[i]
+            for i in range(1, client.v + 1):
+                if node[1] != i and client.G[node[1]][i]['weight'] < node[3]:
+                    node[3] = client.G[node[1]][i]['weight']
+                    node[2] = i
+
+        min_number = min(vote, key = lambda x : x[0]) [0]
+        max_number = max(vote, key = lambda x : x[0]) [0]
+        min_weight = min(vote, key = lambda x : x[3]) [3]
+        max_weight = max(vote, key = lambda x : 0 if x[3] == float('inf') else x[3]) [3]
+        #print(min_number, max_number, min_weight, max_weight)
+        dif_number = max_number - min_number
+        dif_weight = max_weight - min_weight
+
+        vote.sort(key = lambda x: -5 if x[3] == float('inf') else 0.7 * x[0]/dif_number - 0.3 * x[3]/dif_weight, reverse=True)
+
         for node in vote:
+            '''
             min_weight = float('inf')
             tempu = 0
             tempv = 0
@@ -32,6 +48,9 @@ def solve(client):
                 if node[1] != i and client.G[node[1]][i]['weight'] < min_weight:
                     tempu, tempv = node[1], i
                     min_weight = client.G[node[1]][i]['weight']
+            '''
+            tempu = node[1]
+            tempv = node[2]
             num_check = client.remote(tempu, tempv)
             remoted[tempv] += num_check
             count += num_check - remoted[tempu]
