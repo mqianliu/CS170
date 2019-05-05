@@ -7,7 +7,7 @@ def solve(client):
     client.end()
     client.start()
 
-    def find_position():
+    def find_position(shortest_dis):
         all_students = list(range(1, client.students + 1))
         non_home = list(range(1, client.home)) + list(range(client.home + 1, client.v + 1))
         count = 0
@@ -17,7 +17,11 @@ def solve(client):
         remoted = [0 for _ in range(0, 101)]
         bots_position = []
         for v in non_home:
-            scout_dict = client.scout(v, all_students)
+            if len(all_students) == 40:
+                scout_dict = client.scout(v, all_students[:20])
+            else:
+                scout_dict = client.scout(v, all_students)
+            #scout_dict = client.scout(v, all_students)
             for key in scout_dict:
                 if scout_dict[key] is True:
                     vote[v][0] += 1
@@ -37,7 +41,18 @@ def solve(client):
         dif_number = max_number - min_number
         dif_weight = max_weight - min_weight
 
-        vote.sort(key = lambda x: -5 if x[3] == float('inf') else 0.7 * x[0]/dif_number - 0.3 * x[3]/dif_weight, reverse=True)
+
+
+        vote.sort(key = lambda x: x[0], reverse = True)
+        for i in range(6):
+            vote[i][3] = 0
+        vote.sort(key = lambda x: -5 if x[3] == float('inf') else 0.95 * x[0]/dif_number - 0.05 * x[3]/dif_weight, reverse=True)
+
+        '''
+        for i in range(101):
+            x = vote[i]
+            print( 0.95 * x[0]/dif_number - 0.05 * x[3]/dif_weight, x[0], x[3])
+        '''
 
         for node in vote:
             '''
@@ -50,7 +65,7 @@ def solve(client):
                     min_weight = client.G[node[1]][i]['weight']
             '''
             tempu = node[1]
-            tempv = node[2]
+            tempv = shortest_dis[tempu][client.home][1][1]
             num_check = client.remote(tempu, tempv)
             remoted[tempv] += num_check
             count += num_check - remoted[tempu]
@@ -62,7 +77,8 @@ def solve(client):
         for i in range(0, len(num_bots)):
             if num_bots[i] > 0:
                 bots_position.append([i, num_bots[i]])
-        #print(bots_position)
+        print(bots_position)
+        print(len(all_students))
         return bots_position
 
     def floyd():
@@ -83,10 +99,10 @@ def solve(client):
         return distance
 
     def mst2():
-        bots = find_position()
+        d = floyd()
+        bots = find_position(d)
         nodes = [client.home]
         edges = [[0 for col in range(client.v + 1)] for row in range(client.v + 1)]
-        d = floyd()
         while len(bots):
             min_path = float('inf')
             start_node = -1
@@ -97,6 +113,7 @@ def solve(client):
                         min_path = d[n][b[0]][0]
                         start_node = n
                         end_node = b
+            print(end_node[0])
             path = d[start_node][end_node[0]][1]
             for i in range(len(path) - 1):
                 if path[i+1] in bots:
