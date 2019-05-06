@@ -112,7 +112,7 @@ def solve(client):
             if num_bots[i] > 0:
                 bots_position.append([i, num_bots[i]])
         print(bots_position)
-        print(len(all_students))
+        #print(len(all_students))
         return bots_position
 
     def floyd():

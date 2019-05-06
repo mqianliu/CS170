@@ -1,0 +1,113 @@
+[21:52:01] /start API Call succeeded (home = 91, students = 10, bots = 5, scout_time = 1)!
+[21:52:02] /scout API Call succeeded (v = 1, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 1, 2, 5, 6, 9
+[21:52:02] /scout API Call succeeded (v = 2, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 10, 3, 4, 9
+[21:52:02] /scout API Call succeeded (v = 3, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 10, 3, 6, 7, 8, 9
+[21:52:02] /scout API Call succeeded (v = 4, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 4, 6
+[21:52:02] /scout API Call succeeded (v = 5, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 9
+[21:52:02] /scout API Call succeeded (v = 6, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 3, 4, 5, 6
+[21:52:02] /scout API Call succeeded (v = 7, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 1, 2, 4, 5
+[21:52:03] /scout API Call succeeded (v = 8, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students
+[21:52:03] /scout API Call succeeded (v = 9, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 3, 5, 7, 9
+[21:52:03] /scout API Call succeeded (v = 10, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 4, 5, 8
+[21:52:03] /scout API Call succeeded (v = 11, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 4, 5, 6, 8
+[21:52:03] /scout API Call succeeded (v = 12, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 2, 5, 7
+[21:52:03] /scout API Call succeeded (v = 13, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 5, 9
+[21:52:03] /scout API Call succeeded (v = 14, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 4, 9
+[21:52:03] /scout API Call succeeded (v = 15, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 10, 2, 3, 5, 6, 7
+[21:52:03] /scout API Call succeeded (v = 16, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 2, 5, 6, 9
+[21:52:03] /scout API Call succeeded (v = 17, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 2, 7
+[21:52:03] /scout API Call succeeded (v = 18, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 3, 4, 6, 9
+[21:52:03] /scout API Call succeeded (v = 19, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 10, 2, 3, 4, 5, 6, 7, 8, 9
+[21:52:03] /scout API Call succeeded (v = 20, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 8
+[21:52:03] /scout API Call succeeded (v = 21, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 3, 5
+[21:52:03] /scout API Call succeeded (v = 22, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 1, 2, 5
+[21:52:03] /scout API Call succeeded (v = 23, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 3, 5, 6, 9
+[21:52:04] /scout API Call succeeded (v = 24, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 1, 2, 5, 7, 9
+[21:52:04] /scout API Call succeeded (v = 25, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 2
+[21:52:04] /scout API Call succeeded (v = 26, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 6
+[21:52:04] /scout API Call succeeded (v = 27, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 4, 5, 7, 8
+[21:52:04] /scout API Call succeeded (v = 28, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 10, 3, 4, 5, 9
+[21:52:04] /scout API Call succeeded (v = 29, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 10, 3
+[21:52:04] /scout API Call succeeded (v = 30, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 5, 6, 9
+[21:52:04] /scout API Call succeeded (v = 31, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 7, 9
+[21:52:04] /scout API Call succeeded (v = 32, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 4, 5, 6
+[21:52:04] /scout API Call succeeded (v = 33, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 1, 5, 7
+[21:52:04] /scout API Call succeeded (v = 34, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 2, 4, 7
+[21:52:04] /scout API Call succeeded (v = 35, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students
+[21:52:04] /scout API Call succeeded (v = 36, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 8, 9
+[21:52:04] /scout API Call succeeded (v = 37, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 8, 9
+[21:52:04] /scout API Call succeeded (v = 38, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students
+[21:52:04] /scout API Call succeeded (v = 39, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 1, 4
+[21:52:04] /scout API Call succeeded (v = 40, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 3, 4, 7
+[21:52:05] /scout API Call succeeded (v = 41, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 10, 6, 9
+[21:52:05] /scout API Call succeeded (v = 42, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 1, 10, 3, 4, 6, 7, 8, 9
+[21:52:05] /scout API Call succeeded (v = 43, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 2, 3, 5, 8
+[21:52:05] /scout API Call succeeded (v = 44, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 3, 4, 5, 8, 9
+[21:52:05] /scout API Call succeeded (v = 45, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 2, 5, 6, 7
+[21:52:05] /scout API Call succeeded (v = 46, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 2, 4
+[21:52:05] /scout API Call succeeded (v = 47, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 10, 2, 5, 9
+[21:52:05] /scout API Call succeeded (v = 48, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 1, 3
+[21:52:05] /scout API Call succeeded (v = 49, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 2, 3
+[21:52:05] /scout API Call succeeded (v = 50, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students
+[21:52:05] /scout API Call succeeded (v = 51, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 10, 4, 5, 6
+[21:52:05] /scout API Call succeeded (v = 52, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 10, 3, 6
+[21:52:05] /scout API Call succeeded (v = 53, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 2, 3, 7
+[21:52:05] /scout API Call succeeded (v = 54, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 10, 2, 5, 6, 7, 8, 9
+[21:52:05] /scout API Call succeeded (v = 55, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 4, 5, 6, 8
+[21:52:05] /scout API Call succeeded (v = 56, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 10, 2, 4, 5, 9
+[21:52:05] /scout API Call succeeded (v = 57, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students
+[21:52:06] /scout API Call succeeded (v = 58, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 1, 10, 4, 7, 8, 9
+[21:52:06] /scout API Call succeeded (v = 59, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 1, 4, 7
+[21:52:06] /scout API Call succeeded (v = 60, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 10, 5, 6, 8, 9
+[21:52:06] /scout API Call succeeded (v = 61, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 2, 3, 4, 8, 9
+[21:52:06] /scout API Call succeeded (v = 62, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 1, 3, 4, 5
+[21:52:06] /scout API Call succeeded (v = 63, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 1, 2, 3, 4, 5, 6, 7, 8
+[21:52:06] /scout API Call succeeded (v = 64, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 5
+[21:52:06] /scout API Call succeeded (v = 65, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 4, 5
+[21:52:06] /scout API Call succeeded (v = 66, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 2, 6, 7, 9
+[21:52:06] /scout API Call succeeded (v = 67, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students
+[21:52:06] /scout API Call succeeded (v = 68, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 1, 10, 3, 4, 7, 8
+[21:52:06] /scout API Call succeeded (v = 69, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 6, 9
+[21:52:06] /scout API Call succeeded (v = 70, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 4
+[21:52:06] /scout API Call succeeded (v = 71, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 1
+[21:52:06] /scout API Call succeeded (v = 72, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 10, 4, 5
+[21:52:06] /scout API Call succeeded (v = 73, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 1, 10, 3, 5, 9
+[21:52:06] /scout API Call succeeded (v = 74, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 2, 7, 8
+[21:52:07] /scout API Call succeeded (v = 75, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 2, 5, 6, 9
+[21:52:07] /scout API Call succeeded (v = 76, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 7
+[21:52:07] /scout API Call succeeded (v = 77, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 6
+[21:52:07] /scout API Call succeeded (v = 78, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 5, 6
+[21:52:07] /scout API Call succeeded (v = 79, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 3, 5, 9
+[21:52:07] /scout API Call succeeded (v = 80, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 1, 9
+[21:52:07] /scout API Call succeeded (v = 81, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 6, 7, 9
+[21:52:07] /scout API Call succeeded (v = 82, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 10, 2, 3, 5, 6, 9
+[21:52:07] /scout API Call succeeded (v = 83, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 7, 9
+[21:52:07] /scout API Call succeeded (v = 84, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 3, 4, 5
+[21:52:07] /scout API Call succeeded (v = 85, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students
+[21:52:07] /scout API Call succeeded (v = 86, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 10, 2, 3, 4, 5, 7
+[21:52:07] /scout API Call succeeded (v = 87, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students
+[21:52:07] /scout API Call succeeded (v = 88, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 1
+[21:52:07] /scout API Call succeeded (v = 89, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 3, 5, 6
+[21:52:07] /scout API Call succeeded (v = 90, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 2, 9
+[21:52:07] /scout API Call succeeded (v = 92, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 5, 9
+[21:52:08] /scout API Call succeeded (v = 93, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 1, 10, 2, 4, 5
+[21:52:08] /scout API Call succeeded (v = 94, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 8
+[21:52:08] /scout API Call succeeded (v = 95, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 10, 4, 7
+[21:52:08] /scout API Call succeeded (v = 96, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 2, 6
+[21:52:08] /scout API Call succeeded (v = 97, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 4, 6, 7, 9
+[21:52:08] /scout API Call succeeded (v = 98, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 10, 3, 7, 9
+[21:52:08] /scout API Call succeeded (v = 99, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 1, 2, 3, 6
+[21:52:08] /scout API Call succeeded (v = 100, s = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10])! Bots found by students 2
+[21:52:08] /remote API Call succeeded (edge = 19->63)! 1 bot(s) remoted.
+[21:52:08] /remote API Call succeeded (edge = 42->82)! 1 bot(s) remoted.
+[21:52:08] /remote API Call succeeded (edge = 63->91)! 2 bot(s) remoted.
+[21:52:08] /remote API Call succeeded (edge = 54->34)! 0 bot(s) remoted.
+[21:52:08] /remote API Call succeeded (edge = 3->63)! 1 bot(s) remoted.
+[21:52:08] /remote API Call succeeded (edge = 15->91)! 0 bot(s) remoted.
+[21:52:08] /remote API Call succeeded (edge = 68->99)! 1 bot(s) remoted.
+[[82, 1], [91, 2], [99, 1]]
+[21:52:08] /remote API Call succeeded (edge = 82->91)! 1 bot(s) remoted.
+[21:52:08] /remote API Call succeeded (edge = 99->91)! 1 bot(s) remoted.
+[21:52:09] /end API Call succeeded!
+[21:52:09] Score: 80.88979916936907
+[21:52:09] Finished submission 19.
