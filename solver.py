@@ -12,9 +12,11 @@ def solve(client):
         non_home = list(range(1, client.home)) + list(range(client.home + 1, client.v + 1))
         count = 0
         # vote number, vertex index, remote index, min weight
-        vote = [[0, i, 0, float('inf')] for i in range(0, 101)]
-        num_bots = [0 for _ in range(0, 101)]
-        remoted = [0 for _ in range(0, 101)]
+        vote = [[0, i, 0, float('inf')] for i in range(101)]
+        num_bots = [0 for _ in range(101)]
+        remoted = [0 for _ in range(101)]
+        error_students = [0 for _ in range(101)]
+        report = [[0 for col in range(client.v + 1)] for row in range(client.students + 1)]
         bots_position = []
         for v in non_home:
             '''
@@ -27,6 +29,9 @@ def solve(client):
             for key in scout_dict:
                 if scout_dict[key] is True:
                     vote[v][0] += 1
+                    report[key][v] = 1
+                else:
+                    report[key][v] = 0
 
         '''
         minimum weight
@@ -66,18 +71,41 @@ def solve(client):
             print( 0.95 * x[0]/dif_number - 0.05 * x[3]/dif_weight, x[0], x[3])
         '''
 
+        # whether there is a students telling truth
+        find_student_error = -1
         for node in vote:
+            if find_student_error != -1:
+                stu = find_student_error
+                if report[stu][node] == 1:
+                    num_bots[node] = 1
+                continue
+
             tempu = node[1]
-            #tempv = shortest_dis[tempu][client.home][1][1]
             tempv = node[2]
             num_check = client.remote(tempu, tempv)
             remoted[tempv] += num_check
-            count += num_check - remoted[tempu]
+            new_bots = num_check - remoted[tempu]
+            count += new_bots
             num_bots[tempv] += num_check
             if remoted[tempu] > 0:
                 num_bots[tempu] -= num_check
             if count == client.bots:
                 break
+
+            # count students' word
+            if num_check - remoted[tempu] == 0:
+                for i in all_students:
+                    if report[i][tempu] == 1:
+                        error_students[i] += 1
+                        if error_students[i] >= 50:
+                            find_student_error = i
+            else:
+                for i in all_students:
+                    if report[i][tempu] == 0:
+                        error_students[i] += 1
+                        if error_students[i] >= 50:
+                            find_student_error = i
+
         for i in range(0, len(num_bots)):
             if num_bots[i] > 0:
                 bots_position.append([i, num_bots[i]])

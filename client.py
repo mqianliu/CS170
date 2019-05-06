@@ -383,7 +383,7 @@ if __name__ == '__main__':
 
     solver = __import__(args.solver_file)
     if args.submit:
-        for i in range(1):
+        for i in range(9):
             if client.submission(save=False)['remaining'] <= 0:
                 print('0 rescues remaining. Terminating.')
                 sys.exit()
