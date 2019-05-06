@@ -17,10 +17,12 @@ def solve(client):
         remoted = [0 for _ in range(0, 101)]
         bots_position = []
         for v in non_home:
+            '''
             if len(all_students) == 40:
                 scout_dict = client.scout(v, all_students[:20])
             else:
                 scout_dict = client.scout(v, all_students)
+            '''
             scout_dict = client.scout(v, all_students)
             for key in scout_dict:
                 if scout_dict[key] is True:
