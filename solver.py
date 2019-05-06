@@ -21,17 +21,27 @@ def solve(client):
                 scout_dict = client.scout(v, all_students[:20])
             else:
                 scout_dict = client.scout(v, all_students)
-            #scout_dict = client.scout(v, all_students)
+            scout_dict = client.scout(v, all_students)
             for key in scout_dict:
                 if scout_dict[key] is True:
                     vote[v][0] += 1
 
+        '''
+        minimum weight
         for i in range(1, 101):
             node = vote[i]
             for i in range(1, client.v + 1):
                 if node[1] != i and client.G[node[1]][i]['weight'] < node[3]:
                     node[3] = client.G[node[1]][i]['weight']
                     node[2] = i
+        '''
+
+        for i in range(1, 101):
+            if i == client.home:
+                continue
+            node = vote[i]
+            node[2] = shortest_dis[node[1]][client.home][1][1]
+            node[3] = client.G[node[1]][node[2]]['weight']
 
         min_number = min(vote, key = lambda x : x[0]) [0]
         max_number = max(vote, key = lambda x : x[0]) [0]
@@ -55,17 +65,9 @@ def solve(client):
         '''
 
         for node in vote:
-            '''
-            min_weight = float('inf')
-            tempu = 0
-            tempv = 0
-            for i in range(1, client.v + 1):
-                if node[1] != i and client.G[node[1]][i]['weight'] < min_weight:
-                    tempu, tempv = node[1], i
-                    min_weight = client.G[node[1]][i]['weight']
-            '''
             tempu = node[1]
-            tempv = shortest_dis[tempu][client.home][1][1]
+            #tempv = shortest_dis[tempu][client.home][1][1]
+            tempv = node[2]
             num_check = client.remote(tempu, tempv)
             remoted[tempv] += num_check
             count += num_check - remoted[tempu]
@@ -100,9 +102,13 @@ def solve(client):
 
     def mst2():
         d = floyd()
-        bots = find_position(d)
+        bot = find_position(d)
         nodes = [client.home]
         edges = [[0 for col in range(client.v + 1)] for row in range(client.v + 1)]
+        bots = []
+        for i in range(len(bot)):
+            if bot[i][0] != client.home:
+                bots.append(bot[i])
         while len(bots):
             min_path = float('inf')
             start_node = -1
@@ -113,7 +119,6 @@ def solve(client):
                         min_path = d[n][b[0]][0]
                         start_node = n
                         end_node = b
-            print(end_node[0])
             path = d[start_node][end_node[0]][1]
             for i in range(len(path) - 1):
                 if path[i+1] in bots:
