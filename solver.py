@@ -89,13 +89,14 @@ def solve(client):
             new_bots = num_check - remoted[tempu]
             count += new_bots
             num_bots[tempv] += num_check
-            if remoted[tempu] > 0:
-                num_bots[tempu] -= num_check
+            # if remoted[tempu] > 0:
+            num_bots[tempu] = 0
+            remoted[tempu] = 0
             if count == client.bots:
                 break
 
             # count students' word
-            if num_check - remoted[tempu] == 0:
+            if new_bots == 0:
                 for i in all_students:
                     if report[i][tempu] == 1:
                         error_students[i] += 1
