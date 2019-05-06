@@ -15,7 +15,7 @@ def solve(client):
         vote = [[0, i, 0, float('inf')] for i in range(101)]
         num_bots = [0 for _ in range(101)]
         remoted = [0 for _ in range(101)]
-        error_students = [0 for _ in range(101)]
+        error_students = [0 for _ in range(client.students + 1)]
         report = [[0 for col in range(client.v + 1)] for row in range(client.students + 1)]
         bots_position = []
         for v in non_home:
@@ -74,7 +74,9 @@ def solve(client):
         # whether there is a students telling truth
         find_student_error = -1
         for node in vote:
+            #print(error_students)
             if find_student_error != -1:
+                print("find student")
                 stu = find_student_error
                 if report[stu][node] == 1:
                     num_bots[node] = 1
